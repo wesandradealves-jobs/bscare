@@ -1,0 +1,152 @@
+@import '../../tools/_colors'
+
+footer 
+	background: $primary
+	color: white
+	#map 
+		position: relative 
+		padding: 0 0 40%
+		iframe 
+			position: absolute 
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	.logo 
+		a 
+			background-position-y: -45px
+	.copyright 
+		background: white 
+		.container 
+			padding-top: 20px 
+			padding-bottom: 20px
+		p 
+			color: gray 
+			display: block 
+			text-align: center 
+			font-size: .7rem
+	.footer-bottom 	
+		border-top: 1px white solid
+		.container 
+			padding-top: 60px 
+			padding-bottom: 30px
+			> * 
+				&:last-child 
+					> * 
+						margin-bottom: 20px
+					p 
+						font-size: .9rem 
+						line-height: 1.6
+						display: flex 
+						flex-flow: row wrap 
+						align-items: flex-start
+						i,svg 
+							flex: 0 0 auto 
+							height: auto 
+							width: 12px
+							color: lightgray
+							path 
+								fill: lightgray
+							margin-right: 10px
+							top: 4px 
+							position: relative
+		h3 
+			font-weight: bold 
+			text-transform: uppercase 
+			display: block 
+			margin-bottom: 10px
+		ul 
+			li 
+				line-height: 2
+				font-size: .9rem
+				svg
+					transform: rotate(180deg)
+					position: relative 
+					display: inline-block 
+					vertical-align: middle 
+					height: auto 
+					width: 5px!important		
+					margin-right: 5px
+					path 
+						fill: lightgray
+					transform-origin: center center
+		.container 
+			display: flex 
+			flex-flow: row wrap 
+			justify-content: space-between
+			align-items: stretch
+			> * 
+				flex: 1
+				&:not(:last-child)
+					padding-right: 15px 
+				&:not(:first-child)
+					padding-left: 15px
+	.footer-top 
+		display: flex
+		flex-flow: row wrap 
+		justify-content: space-between 
+		align-items: stretch 
+		background: darken($primary, 2%)
+		> * 
+			flex: 1
+			&:first-child 
+				padding: 50px
+				display: flex 
+				flex-flow: column 
+				align-items: center
+				justify-content: center
+				form 
+					display: flex 
+					flex-flow: row wrap 
+					justify-content: space-between
+					align-items: center
+					margin: 0 -10px -10px 
+					> * 
+						flex: 0 0 auto
+						width: 100% 
+						&:not(:last-child):not(:nth-last-child(2))
+							width: 50%
+						padding: 10px
+						textarea,
+						input 
+							width: 100%
+							display: block 
+							border: 0
+							overflow: hidden
+							resize: none
+							padding: 8px 12px
+							border: 1px white solid
+							border-radius: 5px
+							background: rgba(255,255,255,.2)
+							color: white
+							&[placeholder]
+								color: white
+							&::-moz-placeholder
+								color: white
+							&::-webkit-input-placeholder
+								color: white
+							&:-ms-input-placeholder 
+								color: white
+						textarea 
+							height: 100px
+						.btn 	
+							text-transform: initial
+							font-weight: normal 
+							margin: 30px auto 0
+							display: block
+							padding-left: 20px 
+							padding-right: 20px
+				> p 
+					&:first-of-type 
+						& + p 
+							margin: 20px auto 30px 
+							font-size: 1.1rem
+						span 
+							display: inline-block 
+							vertical-align: middle
+							font-weight: bold 
+							font-size: 1.3rem
+							border: 2px white solid 
+							padding: 6px 12px
+							margin-left: 5px
+							border-radius: 999px

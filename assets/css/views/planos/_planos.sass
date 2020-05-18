@@ -1,0 +1,175 @@
+@import '../../tools/_colors'
+
+.pg-plano
+	.adira-ja 
+		.container 
+			padding-top: 90px
+			padding-bottom: 90px
+			.form 
+				display: flex 
+				justify-content: space-between
+				align-items: center 
+				flex-flow: row wrap
+				color: gray
+				.--submit 
+					display: none
+				margin: 0 -10px -10px 
+				p 
+					font-size: .9rem 
+					font-weight: bold
+				> * 
+					flex: 0 0 auto 
+					width: 50%
+					padding: 0 10px 10px
+					label 
+						display: block 
+						font-weight: bold 
+						font-size: .9rem
+					textarea 
+						height: 90px
+					input, textarea 
+						font-size: .9rem
+						&:not([type='radio']):not([type='checkbox'])
+							padding: 6px 12px 
+							border: 1px lightgray solid
+							display: block
+							width: 100%
+							overflow: hidden 
+							resize: none
+							margin-top: 5px
+					&:last-child,
+					&:first-child,
+					&:nth-last-child(2),
+					&:nth-last-child(3),
+					&:nth-last-child(4)
+						width: 100%
+	.cards 
+		background: $primary
+		.container 
+			padding-top: 70px
+		.row 
+			display: flex 
+			flex-flow: row wrap 
+			justify-content: space-between 
+			align-items: stretch
+			margin: 0 -15px -15px 
+			> * 
+				padding: 0 15px 15px
+				flex: 0 0 auto 
+				width: 33.333%
+				.card 
+					background: white 
+					height: 100%
+					display: flex 
+					flex-flow: column
+					justify-content: center
+					padding: 30px
+					border-radius: 5px
+					color: $primary 
+					> *
+						&:first-child 
+							position: absolute
+							right: 0
+							top: 0
+							z-index: 2
+							color: white
+							background: $primary 
+							height: 60px
+							width: 60px 
+							display: flex 
+							flex-flow: column 
+							justify-content: center 
+							align-items: center
+							font-size: 1.4rem
+							border-radius: 999px
+							margin: 5px
+							&::after,
+							&::before 
+								position: absolute 
+								background: transparent 
+								border-radius: 999px
+								height: calc(100% + 40px)
+								width: calc(100% + 40px)
+								border: 1px transparentize($primary, .5) solid 
+								z-index: 1
+								top: calc( 50% - calc(100% + 40px)/2 )
+								left: calc( 50% - calc(100% + 40px)/2 )
+								content: ''
+							&::after 
+								border: 1px transparentize($primary, .9) solid 
+								height: calc(100% + 70px)
+								width: calc(100% + 70px)	
+								top: calc( 50% - calc(100% + 70px)/2 )
+								left: calc( 50% - calc(100% + 70px)/2 )														
+					h4 
+						display: block 
+						margin-top: 30px
+						i 
+							display: inline-block 
+							vertical-align: middle 
+						font-size: 3rem
+						span 
+							margin: 0 -10px
+						svg
+							font-size: initial
+						small 
+							font-size: initial
+							font-weight: normal
+					h3 
+						font-size: 1.6rem 
+						max-width: 200px
+						text-transform: uppercase
+						small 
+							font-size: .9rem
+							display: block
+							text-transform: initial 
+							color: lightgray
+							font-weight: bold
+	.webdoor 
+		height: 310px
+		.container
+			z-index: 2
+			height: 100%
+			display: flex 
+			flex-flow: column 
+			justify-content: center 
+			align-items: center
+			text-align: center 
+			color: white 
+			max-width: 750px
+			h2 
+				font-size: 2rem
+				text-transform: uppercase
+				font-weight: bold 
+				&::after 	
+					height: 1px 
+					width: 50px
+					background: rgba(255,255,255,.35) 
+					margin: 30px auto
+					content: ''
+					display: block 
+			p 
+				font-size: .9rem 
+				font-weight: bold
+		&::after 
+			background: rgba(0,0,0,.35)
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+			height: 100%
+			width: 100%
+			content: ''
+	.tabela-de-precos 
+		text-align: center
+		padding-top: 10px
+		.tabela-headers
+			font-weight: bold 
+			>*
+				font-size: .9rem
+		.container
+			max-width: 1140px
+			> p 
+				display: block
+				font-size: .8rem
+				padding: 10px 0 30px

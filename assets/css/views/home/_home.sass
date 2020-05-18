@@ -1,0 +1,264 @@
+@import '../../tools/_colors'
+
+.pg-home
+	.prestadoras
+		.container 
+			.owl-carousel
+				.owl-item 
+					transition: 500ms ease-in-out filter
+				&:hover 
+					.owl-item 
+						filter: blur(2px)
+						&:hover 
+							filter: initial
+				.item 
+					padding: 0 15px
+					img 	
+						width: auto 
+						max-width: 100%
+						display: block 
+						margin: 0 auto 
+	.tabela-de-precos
+		.section-title 
+			color: inherit 
+			&::after 
+				background: white
+	.planos-de-saude
+		background: darken(whitesmoke, 2%)
+		padding: 120px 0 90px
+		.servicos-inclusos
+			.container 
+				background: white
+				padding-left: 100px
+				padding-right: 100px
+				box-shadow: 0px 0px 5px -3px black
+				.row 
+					display: flex 
+					flex-flow: row wrap 
+					justify-content: space-between
+					align-items: stretch
+					margin: 60px -15px -80px
+					> * 
+						flex: 0 0 auto
+						width: 50%
+						padding: 0 15px 80px
+						display: inherit 
+						flex-flow: inherit 
+						justify-content: inherit
+						align-items: inherit
+						>* 
+							&:first-child
+								background: $primary
+								color: white 
+								svg
+									width: auto
+									height: 20px
+									path 
+										fill: white 
+								height: 50px
+								width: 50px 
+								border-radius: 999px
+								display: flex 
+								flex-flow: column 
+								justify-content: center 
+								align-items: center 
+								flex: 0 0 auto
+								& + * 
+									h3 
+										color: $primary 
+										font-size: 1rem
+										& ~ p
+											&:nth-child(3)
+												font-weight: 200
+												font-size: .9rem
+											&:nth-child(2)
+												color: $gray
+												font-weight: bold 
+												font-size: .9rem 
+												margin: 10px 0 
+									flex: 1
+									padding-left: 15px
+		.planos
+			h2 
+				color: $primary 
+				background: white 
+				padding: 20px 0
+				text-transform: uppercase
+				font-weight: bold
+				text-align: center 
+				font-size: 2rem
+				display: block
+				width: 100%
+				max-width: 360px
+				margin: 0 auto 50px
+				border-radius: 10px
+			.row 
+				display: flex 
+				flex-flow: row wrap 
+				margin: 0 -15px
+				justify-content: space-between
+				> * 
+					flex: 1
+					height: 214px
+					padding: 0 15px
+					border-radius: 10px
+					&:hover 
+						a::after
+							opacity: 1
+					a
+						&::after 
+							content: ''
+							display: block 
+							position: absolute 
+							top: 0
+							opacity: 0
+							transition: 500ms linear opacity
+							left: 0
+							width: 100%
+							height: 100%
+							z-index: 2
+							background-color: rgba(255,255,255,.35)					
+						display: flex 
+						flex-flow: column 
+						justify-content: center 
+						align-items: center 
+						height: 100%
+						width: 100%
+						border-radius: 10px
+						box-shadow: 0px 5px 10px -8px black
+						background-position: center center
+						background-size: cover 
+						background-repeat: no-repeat 
+						color: white 
+						text-transform: uppercase
+						font-size: 1.5rem
+						overflow: hidden
+						position: relative
+						i 	
+							display: block 
+							margin-bottom: 15px
+							font-size: 6rem
+						&.individual 
+							background-image: url(./assets/img/bsfamiliar.jpg) 
+						&.familiar 
+							background-image: url(./assets/img/bsfamiliar_.jpg) 
+						&.grupo 
+							background-image: url(./assets/img/bsgrupo.jpg) 														
+			.container 
+				background: $primary
+				padding: 40px 50px 100px
+				border-radius: 10px 10px 0 0
+	.bs-care
+		background: whitesmoke
+		.row 
+			display: flex
+			flex-flow: row wrap 
+			justify-content: space-between
+			align-items: stretch
+			margin: 0 -15px -15px
+			> div 
+				flex: 0 0 auto 
+				padding: 15px
+				> div 
+					background: white
+					height: 100%
+					padding: 40px
+					h2 
+						font-size: 1.5rem
+						display: block 
+						text-transform: uppercase
+						small 
+							display: block
+							font-size: .9rem
+							text-transform: initial
+							font-family: 'Droid Serif'
+							color: $primary
+							margin: 10px 0 20px
+					p 
+						color: $gray
+						font-size: .9rem 
+						line-height: 1.5
+				&:nth-child(3),
+				&:nth-child(1)
+					width: 41.66666667%
+					& + *
+						flex: 1
+				&:nth-child(3) 
+					width: 58.33333333%
+	.webdoor 
+		& ~ section 
+			.container 
+				padding-top: 80px
+				padding-bottom: 80px
+		.owl-dots
+			position: absolute 
+			bottom: 30px
+			width: 100%
+			display: flex 
+			flex-flow: row wrap 
+			justify-content: center
+			align-items: center
+			.owl-dot 
+				margin: 0 5px
+				&.active 
+					span
+						border-color: black 
+						background: white
+				span 
+					border: 3px rgba(255,255,255,.3) solid
+					width: 20px
+					height: 20px
+					margin: 0
+					background: transparent 
+		.owl-nav 
+			position: absolute 
+			top: calc(50% - 45px/2)
+			height: 0
+			display: flex 
+			flex-flow: row wrap 
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			padding: 0 45px
+			button 	
+				height: 40px
+				width: 40px
+				text-align: center 
+				background: rgba(0,0,0,.35)!important
+				font-size: 2.5rem
+				color: black!important
+				position: relative
+				border-radius: 999px
+				span 
+					height: 100%
+					width: 100%
+					position: absolute
+					top: 0
+					line-height: 35px
+					left: 0
+					color: white
+		.item 
+			min-height: calc(100vh - 85px)
+			background-size: cover 
+			background-position: center center 
+			background-repeat: no-repeat
+			display: flex 
+			justify-content: center 
+			align-items: center 
+			flex-flow: column wrap
+			text-align: center 
+			color: white
+			font-weight: 300
+			h2 
+				font-size: 5rem 
+			p 
+				font-size: 1.2rem
+				display: block 
+				margin: 15px auto 25px
+			.btn 
+				display: block
+				margin-left: auto 
+				margin-right: auto 
+				max-width: 160px
+				&:nth-child(2)
+					margin-top: 30px
