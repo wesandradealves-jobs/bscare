@@ -1,0 +1,43 @@
+@import '../../tools/_colors'
+
+.pg-seja-prestador
+	.seja-prestador 
+		.container 
+			background: $primary
+			padding: 50px
+			.section-title 
+				color: white 
+				margin-bottom: 40px
+				&::after 
+					display: none
+			.form 
+				display: flex 
+				flex-flow: row wrap 
+				align-items: center 
+				margin: 0 -10px -20px
+				> * 
+					flex: 0 0 auto 
+					width: 100%
+					padding: 0 10px 20px
+					textarea 
+						height: 90px
+					input, textarea 
+						font-size: .9rem
+						&:not([type='radio']):not([type='checkbox'])
+							padding: 6px 12px 
+							display: block
+							width: 100%
+							overflow: hidden 
+							resize: none
+					label 
+						font-weight: bold 
+						font-size: .9rem 
+						display: block 
+						margin-bottom: 5px
+						color: white
+						span 	
+							color: red
+					&:not(:last-child):not(:nth-last-child(2))
+						width: 50%
+				.btn-1 
+					background: darken($primary, 5%)

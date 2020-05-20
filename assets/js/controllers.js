@@ -44,9 +44,30 @@ var Controller = {
             }
         });        
     },   
-    rede: function () {
+    rede_prestadores: function () {
         
-    },   
+    },  
+    info_prestadores: function () {
+        $( ".filter ul" ).children().each(function( index ) {
+            $( this ).children().click(function() {
+                var data = $(this)[0].dataset.country;
+
+                $(this).closest('ul').find('.active').not($(this).parent()).removeClass('active'),
+                $(this).parent().addClass('active');
+
+                $('.filter').next('.row').children().each(function( index ) {
+                    if($(this)[0].dataset.country !== data) {
+                        $(this).hide()
+                    } else {
+                        $(this).show()
+                    }
+                }); 
+            });              
+        });        
+    },       
+    seja_prestador: function () {
+        
+    },      
     bs_care: function () {
         
     }      
